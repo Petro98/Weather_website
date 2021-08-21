@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styile.css" />
+		<link
+			rel="icon"
+			href="https://image.flaticon.com/icons/png/512/4832/4832078.png"
+			type="image/x-icon"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<div class="container1">
+				<button class="bear" onclick="rest()">
+					<img
+						src="https://image.flaticon.com/icons/png/512/1415/1415439.png"
+						alt=""
+					/>
+				</button>
+				<div class="header-text">Прогноз погоди</div>
+			</div>
+		</header>
+		<div class="nav">
+			<div class="nav_block">
+				<label for="text">Оберіть місто</label>
+				<input class="input_weather" type="text" id="text" value="" />
+				<button id="upload" class="upload-btn" type="button">Search</button>
+			</div>
+		</div>
+		<div class="container">
+			<div class="slide slide1">
+				<h3>First day</h3>
+				<div class="container_2">
+					<div class="slide1_dey">
+						<div class="text_dey">
+							<h1 class="a">Львів</h1>
+							<h2 class="a">2021-08-20</h2>
+						</div>
+					</div>
+					<div class="slide1_text">
+						<div>Time:</div>
+						<div class="sky">Sky:</div>
+						<div class="heat">Heat:</div>
+						<div class="MAX">MAX-MIN:</div>
+						<div class="Speed">Speed:</div>
+					</div>
+
+					<div class="slide1_block">
+						<div class="block_1 block">
+							<div class="day a">ніч</div>
+							<div class="time a">03:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_2 block">
+							<div class="day a">ранок</div>
+							<div class="time a">09:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_3 block">
+							<div class="day a">день</div>
+							<div class="time a">15:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_4 block">
+							<div class="day a">вечір</div>
+							<div class="time a">21:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide slide2">
+				<h3>Second day</h3>
+				<div class="container_2">
+					<div class="slide1_dey">
+						<div class="text_dey">
+							<h1 class="a">Львів</h1>
+							<h2 class="a">2021-08-20</h2>
+						</div>
+					</div>
+					<div class="slide1_text">
+						<div>Time:</div>
+						<div class="sky">Sky:</div>
+						<div class="heat">Heat:</div>
+						<div class="MAX">MAX-MIN:</div>
+						<div class="Speed">Speed:</div>
+					</div>
+
+					<div class="slide1_block">
+						<div class="block_1 block">
+							<div class="day a">ніч</div>
+							<div class="time a">03:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_2 block">
+							<div class="day a">ранок</div>
+							<div class="time a">09:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_3 block">
+							<div class="day a">день</div>
+							<div class="time a">15:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_4 block">
+							<div class="day a">вечір</div>
+							<div class="time a">21:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide slide3">
+				<h3>Third day</h3>
+				<div class="container_2">
+					<div class="slide1_dey">
+						<div class="text_dey">
+							<h1 class="a">Львів</h1>
+							<h2 class="a">2021-08-20</h2>
+						</div>
+					</div>
+					<div class="slide1_text">
+						<div>Time:</div>
+						<div class="sky">Sky:</div>
+						<div class="heat">Heat:</div>
+						<div class="MAX">MAX-MIN:</div>
+						<div class="Speed">Speed:</div>
+					</div>
+
+					<div class="slide1_block">
+						<div class="block_1 block">
+							<div class="day a">ніч</div>
+							<div class="time a">03:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_2 block">
+							<div class="day a">ранок</div>
+							<div class="time a">09:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_3 block">
+							<div class="day a">день</div>
+							<div class="time a">15:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_4 block">
+							<div class="day a">вечір</div>
+							<div class="time a">21:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide slide4">
+				<h3>Fourth day</h3>
+				<div class="container_2">
+					<div class="slide1_dey">
+						<div class="text_dey">
+							<h1 class="a">Львів</h1>
+							<h2 class="a">2021-08-20</h2>
+						</div>
+					</div>
+					<div class="slide1_text">
+						<div>Time:</div>
+						<div class="sky">Sky:</div>
+						<div class="heat">Heat:</div>
+						<div class="MAX">MAX-MIN:</div>
+						<div class="Speed">Speed:</div>
+					</div>
+
+					<div class="slide1_block">
+						<div class="block_1 block">
+							<div class="day a">ніч</div>
+							<div class="time a">03:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_2 block">
+							<div class="day a">ранок</div>
+							<div class="time a">09:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_3 block">
+							<div class="day a">день</div>
+							<div class="time a">15:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_4 block">
+							<div class="day a">вечір</div>
+							<div class="time a">21:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide slide5">
+				<h3>Fifth day</h3>
+				<div class="container_2">
+					<div class="slide1_dey">
+						<div class="text_dey">
+							<h1 class="a">Львів</h1>
+							<h2 class="a">2021-08-20</h2>
+						</div>
+					</div>
+					<div class="slide1_text">
+						<div>Time:</div>
+						<div class="sky">Sky:</div>
+						<div class="heat">Heat:</div>
+						<div class="MAX">MAX-MIN:</div>
+						<div class="Speed">Speed:</div>
+					</div>
+
+					<div class="slide1_block">
+						<div class="block_1 block">
+							<div class="day a">ніч</div>
+							<div class="time a">03:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_2 block">
+							<div class="day a">ранок</div>
+							<div class="time a">09:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_3 block">
+							<div class="day a">день</div>
+							<div class="time a">15:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="block_4 block">
+							<div class="day a">вечір</div>
+							<div class="time a">21:00</div>
+							<div class="img a">
+								<img
+									src="https://image.flaticon.com/icons/png/512/4658/4658272.png"
+									alt=""
+								/>
+							</div>
+							<div class="temperature a">21</div>
+							<div class="temperature-MAX_MIN a">21-23</div>
+							<div class="temperature-SPPED a">0.8</div>
+							<div class="img a b">
+								<img
+									src="https://image.flaticon.com/icons/png/512/3015/3015005.png"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/addTow.js"></script>
+		<script src="js/button.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

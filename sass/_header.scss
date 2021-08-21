@@ -1,0 +1,41 @@
+header {
+	overflow: hidden;
+	height: 8vh;
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	.container1 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 100px;
+
+		.bear {
+			margin-left: 200px;
+			background-color: rgba(73, 76, 95, 0);
+			margin: 0;
+			padding: 0;
+			cursor: wait;
+			img {
+				margin-top: 3px;
+				transition: 0.3s ease-out;
+				background-color: rgb(255, 255, 255);
+				height: 51px;
+				border-radius: 50%;
+				border: 1px solid rgb(255, 255, 255);
+			}
+			:hover {
+				transform: rotate(180deg);
+				transition: 0.2s ease-out;
+			}
+		}
+		.header-text {
+			font-size: 18px;
+			color: #fff;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
