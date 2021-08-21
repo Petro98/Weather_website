@@ -10,7 +10,7 @@ function gettingADateByPressing() {
 
 	const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputWeather}&appid=2d36c39e8f1229ec349781478b6b3a9a`;
 	// запит на сервер
-	async function obtainingData() {
+	async function requestToServer() {
 		try {
 			let value = await fetch(url);
 
@@ -23,9 +23,9 @@ function gettingADateByPressing() {
 		}
 	}
 	//збереження інформації
-	async function SavingInformation() {
+	async function savingInformation() {
 		try {
-			let value = await obtainingData();
+			let value = await requestToServer();
 			if (value === undefined) {
 				throw Error('error');
 			}
@@ -35,12 +35,12 @@ function gettingADateByPressing() {
 			console.log(err, 'err_2');
 		}
 	}
-	SavingInformation();
+	savingInformation();
 }
 
 // робота з отриманими даними
 function slideScrolling() {
-	recordDataInTheBlockDey();
+	weatherDataProcessing();
 	setTimeout(() => {
 		nav.classList.add('app');
 	}, 1500);
@@ -51,7 +51,7 @@ function rest() {
 	nav.classList.remove('app');
 }
 
-function recordDataInTheBlockDey() {
+function weatherDataProcessing() {
 	const slide1_block = document.querySelectorAll('.slide1_block .block');
 	let objInfo;
 	let filtered = OBJ_WEATHER[0].list.filter((ooo, i) => i % 2 === 0);
@@ -62,12 +62,12 @@ function recordDataInTheBlockDey() {
 		: (objInfo = filtered1);
 
 	let key = 0;
-	recordDataInTheBlock(objInfo);
+	weatherDataProcessingBlock(objInfo);
 	for (let i = 0; i < slide1_block.length; i++) {
 		let timeObj = objInfo[key].dt_txt.split(' ')[1].split(':')[0];
 		let timeBlock = slide1_block[i].children[1].textContent.split(':')[0];
 		if (timeObj !== timeBlock) {
-			slide1_block[i].children[2].innerHTML = '-'
+			slide1_block[i].children[2].innerHTML = '-';
 			slide1_block[i].children[3].innerHTML = '-';
 			slide1_block[i].children[4].innerHTML = '-';
 			slide1_block[i].children[5].innerHTML = '-';
@@ -75,29 +75,40 @@ function recordDataInTheBlockDey() {
 		}
 		if (timeObj === timeBlock) {
 			let stanPogoda = objInfo[key].weather[0].description;
-			if (stanPogoda === 'scattered clouds') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/414/414825.png';
-			} else if (stanPogoda === 'few clouds') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/616/616682.png';
-			} else if (stanPogoda === 'overcast clouds') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/984/984576.png';
-			}else if (stanPogoda === 'broken clouds') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/1638/1638813.png';
-			}else if (stanPogoda === 'clear sky') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/4076/4076552.png';
-			}else if (stanPogoda === 'light rain') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/2930/2930058.png';
-			}else if (stanPogoda === 'moderate rain') {
-				slide1_block[i].children[2].children[0].src =
-					'https://image.flaticon.com/icons/png/512/1146/1146797.png';
-			}else {
-				slide1_block[i].children[2].children[0].src = 'https://image.flaticon.com/icons/png/512/59/59576.png'
+
+			switch (stanPogoda) {
+				case 'scattered clouds':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/414/414825.png';
+					break;
+				case 'few clouds':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/616/616682.png';
+					break;
+				case 'overcast clouds':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/984/984576.png';
+					break;
+				case 'broken clouds':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/1638/1638813.png';
+					break;
+				case 'clear sky':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/4076/4076552.png';
+					break;
+				case 'light rain':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/2930/2930058.png';
+					break;
+				case 'moderate rain':
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/1146/1146797.png';
+					break;
+				default:
+					slide1_block[i].children[2].children[0].src =
+						'https://image.flaticon.com/icons/png/512/59/59576.png';
+					break;
 			}
 
 			slide1_block[i].children[3].innerHTML = Math.round(
@@ -116,7 +127,7 @@ function recordDataInTheBlockDey() {
 	console.log(objInfo);
 }
 
-function recordDataInTheBlock(Info) {
+function weatherDataProcessingBlock(Info) {
 	const slide1_dey = document.querySelectorAll('.slide1_dey .text_dey');
 	const inputWeather = document.querySelector('.input_weather').value;
 	let ii = 0;
