@@ -43,7 +43,7 @@ function slideScrolling() {
 	recordDataInTheBlockDey();
 	setTimeout(() => {
 		nav.classList.add('app');
-	}, 2000);
+	}, 1500);
 }
 
 // рес ст
