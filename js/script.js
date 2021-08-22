@@ -1,6 +1,6 @@
 const button = document.querySelector('.upload-btn');
 const nav = document.querySelector('.nav');
-const OBJ_WEATHER = [];
+let OBJ_WEATHER = [];
 
 button.addEventListener('click', gettingADateByPressing);
 
@@ -29,7 +29,8 @@ function gettingADateByPressing() {
 			if (value === undefined) {
 				throw Error('error');
 			}
-			await OBJ_WEATHER.push(value);
+			// OBJ_WEATHER = []
+			await OBJ_WEATHER.unshift(value);
 			await slideScrolling();
 		} catch (err) {
 			console.log(err, 'err_2');
@@ -124,7 +125,7 @@ function weatherDataProcessing() {
 			key++;
 		}
 	}
-	console.log(objInfo);
+	console.log(OBJ_WEATHER);
 }
 
 function weatherDataProcessingBlock(Info) {

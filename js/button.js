@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function(){
 			let cl = this.classList,
 				r = "upload-btn--running",
 				d = "upload-btn--done",
-				dur = 2000;
+				dur = 2500;
 
 			if (!cl.contains(r) && !cl.contains(d) && !this.disabled) {
 				cl.add(r);
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",function(){
 						cl.remove(d);
 						this.disabled = false;
 						this.innerHTML = "Search";
-					},700);
+					},1000);
 				},dur);
 			}
 		});
