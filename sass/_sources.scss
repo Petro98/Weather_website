@@ -188,7 +188,10 @@ body {
 }
 
 .slide:hover{
-	box-shadow: 0 0 10px rgb(255, 255, 255);
+	box-shadow: 0 0 10px rgb(0, 0, 0);
+	flex: 1.15;
+	transition: opacity 0.2s ease-in 0.2s;
+
 }
 
 .slide h3{
@@ -212,8 +215,6 @@ body {
 	}
 	flex: 10;
 	.container_2{
-		.slide1_text{
-		}
 	transition: opacity 0.3s ease-in 0.3s;
    opacity: 1;
 	} 

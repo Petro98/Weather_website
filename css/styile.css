@@ -355,8 +355,13 @@ body {
 }
 
 .slide:hover {
-  -webkit-box-shadow: 0 0 10px white;
-          box-shadow: 0 0 10px white;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15;
+          flex: 1.15;
+  -webkit-transition: opacity 0.2s ease-in 0.2s;
+  transition: opacity 0.2s ease-in 0.2s;
 }
 
 .slide h3 {
