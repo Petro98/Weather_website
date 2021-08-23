@@ -377,10 +377,17 @@ body {
 }
 
 .slide.active {
+  -webkit-box-shadow: 0 0 10px #465298;
+          box-shadow: 0 0 10px #465298;
   -webkit-box-flex: 10;
       -ms-flex: 10;
           flex: 10;
   background-color: white;
+}
+
+.slide.active .slide1_block .block {
+  -webkit-box-shadow: 0 0 10px #465298;
+          box-shadow: 0 0 10px #465298;
 }
 
 .slide.active h3 {
