@@ -357,11 +357,12 @@ body {
 .slide:hover {
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
-  -webkit-box-flex: 1.15;
-      -ms-flex: 1.15;
-          flex: 1.15;
+  -webkit-box-flex: 1.1;
+      -ms-flex: 1.1;
+          flex: 1.1;
   -webkit-transition: opacity 0.2s ease-in 0.2s;
   transition: opacity 0.2s ease-in 0.2s;
+  background-color: white;
 }
 
 .slide h3 {
@@ -379,6 +380,7 @@ body {
   -webkit-box-flex: 10;
       -ms-flex: 10;
           flex: 10;
+  background-color: white;
 }
 
 .slide.active h3 {
